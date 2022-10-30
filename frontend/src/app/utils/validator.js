@@ -1,9 +1,9 @@
 import { EMAIL_REG } from './constants';
 
-const validatePassword = password => password.length > 7 && password.length < 17;
-const validateEmail = email => EMAIL_REG.test(email);
-const validateUserName = username => username.length > 2 && username.length < 21;
-const validatePasswordAndRePassword = ({ password, rePassword }) => password === rePassword;
+export const validatePassword = password => password.length > 7 && password.length < 17;
+export const validateEmail = email => EMAIL_REG.test(email);
+export const validateUserName = username => username.length > 2 && username.length < 21;
+export const validatePasswordAndRePassword = ({ password, rePassword }) => password === rePassword;
 
 export const validateLoginForm = ({ email, password }) => {
     const errorWhileValidation = [];
